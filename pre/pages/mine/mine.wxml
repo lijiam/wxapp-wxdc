@@ -1,0 +1,26 @@
+<!--pages/mine/mine.wxml-->
+<view class="top-mode">
+  <view class='userinfo'>
+    <image class="userinfo-avatar" src="{{avatarUrl}}"></image>
+    <label style="color:white">{{nickName}}</label>
+  </view>
+</view>
+<view class='go-center card-box'>
+  <view class='card-info'>
+      <button wx:if="{{showUser}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="warn" style='margin-top:22px'>授权登录</button>
+    <view wx:else style='height:100%'>
+      <view class='down-center' style='height:50%;border-bottom:1px solid #E3E3E3;' bindtap='showMyYhqs'>
+        <label style='font-size:15px;margin-left:15px'>我的优惠券</label>
+      </view>
+      <view class='down-center' style='height:50%' bindtap='showMyCard'>
+        <label style='font-size:15px;margin-left:15px'>我的会员卡</label>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="go-center" style='margin-top:80px;font-size:14px;color:blue;' bindtap='bitphone'>
+  <label style='border-bottom:1px solid blue'>客服电话：{{phoneNumber}}</label>
+</view>
+<view class='go-center' style='margin-top:10px'>
+  <label style='font-size:12px;color:#E2E2E2'>[服务时间 周一至周六 9:00-23:00]</label>
+</view>

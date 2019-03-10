@@ -1,0 +1,59 @@
+<!--pages/order/list/list.wxml-->
+<view class="container">
+  <view class='go-center' style='margin-top:10px'>
+    <view class='tab-box'>
+      <view bindtap='changeTab' data-index="0" class="go-center {{tabIndex==0?'active-color':'unactive-color'}}" style='width:50%'>历史订单</view>
+      <view bindtap='changeTab' data-index="1" class="go-center {{tabIndex==1?'active-color':'unactive-color'}}" style='width:50%'>预约订单</view>
+    </view>
+  </view>
+  <view wx:if="{{tabIndex==0}}">
+    <view wx:if="{{jsList.length==0}}" style='width:100%'>
+      <view class='go-center' style="margin-top:100px">
+        <i class="iconfont icon-dingdan dindgan-i"></i>
+      </view>
+      <view class='go-center note-btn'>目前没有历史订单</view>
+      <view class='go-center' style='margin-top:20px'>
+        <view class='go-center down-center start-btn' bindtap='golist'>我要点餐</view>
+      </view>
+    </view>
+    <view wx:else class="full-width">
+      <view wx:for="{{jsList}}" wx:key="unique" class='list-cards'>
+        <view class='list-card' style='border: 1px solid {{item.balance_status == 1?"#DC143C":"#B6D9A9"}}'>
+          <view class='list-card-top'>
+            <view style='float:left;padding-left:5px'>订单编号：{{item.order_id}}</view>
+            <view style='float:right;padding-right:5px'>创建时间：{{item.create_time}} </view>
+          </view>
+          <view class='list-card-left'>总价：¥{{item.total_price}}.00</view>
+          <view class="list-card-right" style='background-color:{{item.balance_status == 1?"#DC143C":"#B6D9A9"}}'>{{item.balance_status == 1?"未付款":"已付款"}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view wx:if="{{yyList.length==0}}" style='width:100%'>
+      <view class='go-center' style="margin-top:100px">
+        <i class="iconfont icon-dingdan dindgan-i"></i>
+      </view>
+      <view class='go-center note-btn'>目前没有预约订单</view>
+      <view class='go-center' style='margin-top:20px'>
+        <view class='go-center down-center start-btn' bindtap='golist'>我要预约</view>
+      </view>
+    </view>
+  <view wx:else class="full-width">
+      <view wx:for="{{yyList}}" wx:key="unique" class='list-cards'>
+        <view class='list-card' style='border: 1px solid {{item.reserveStatus == 0?"#DC143C":"#B6D9A9"}}'>
+          <view class='list-card-top'>
+            <view style='float:left;padding-left:5px'>订单编号：{{item.id}}</view>
+            <view style='float:right;padding-right:5px'>创建时间：{{item.reserveDate}} </view>
+          </view>
+          <view class='list-card-left'>预约号：A{{item.reserveNo}}</view>
+          <view class="list-card-right" style='background-color:{{item.reserveStatus == 0?"#DC143C":"#B6D9A9"}}'>{{item.reserveStatus == 0?"已失效":"生效中"}}</view>
+        </view>
+      </view>
+    </view>
+
+
+
+
+  </view>
+</view>

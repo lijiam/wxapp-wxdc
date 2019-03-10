@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/order/balance/balance",
+    "pages/mine/mine",
+    "pages/order/list/list",
+    "pages/order/detail/detail",
+    "pages/reserve/reserve",
+    "pages/coupon/coupon",
+    "pages/usercard/usercard"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#DC143C",
+    "navigationBarTitleText": "一起捞",
+    "navigationBarTextStyle":"white"
+  },
+    "tabBar": {
+      "color": "#8a8a8a",
+      "selectedColor": "#DC143C",
+      "borderStyle": "black",
+      "list": [
+        {
+          "selectedIconPath": "images/home_a.png",
+          "iconPath": "images/home_b.png",
+          "pagePath": "pages/index/index",
+          "text": "首页"
+        },
+        {
+          "selectedIconPath": "images/cart_a.png",
+          "iconPath": "images/cart_b.png",
+          "pagePath": "pages/order/list/list",
+          "text": "订单"
+        },
+        {
+          "selectedIconPath": "images/my_a.png",
+          "iconPath": "images/my_b.png",
+          "pagePath": "pages/mine/mine",
+          "text": "我的"
+        }
+      ]
+    }
+}

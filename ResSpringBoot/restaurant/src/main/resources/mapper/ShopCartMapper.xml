@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wx.restaurant.mybatis.mapper.ShopCartMapper" >
+  <resultMap id="BaseResultMap" type="com.wx.restaurant.mybatis.model.ShopCart" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="shop_cart_id" property="shopCartId" jdbcType="INTEGER" />
+    <result column="balance_id" property="balanceId" jdbcType="INTEGER" />
+    <result column="dish_id" property="dishId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+    <result column="detail" property="detail" jdbcType="VARCHAR" />
+    <result column="count" property="count" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    shop_cart_id, balance_id, dish_id, name, price, detail, count, create_time, update_time
+  </sql>
+</mapper>

@@ -1,0 +1,34 @@
+<!-- 引入modal模板 -->
+<!-- <import src="../../components/modal/modal.wxml"/> -->
+<!--index.wxml-->
+<view class="container">
+  <!-- 顶部轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 操作按钮 -->
+  <view class='btn-bar'>
+    <view class='btn-block' bindtap='golist'>
+      <view class="btn_op1">我要点餐</view>
+    </view>
+    <view class='btn-block' bindtap='goreserve'>
+      <view class="btn_op2">我要预约</view>
+    </view>
+  </view>
+  <!-- 中部广告 -->
+  <view class="ad-box">
+    <image src='../../images/smdc.gif' class="image_ad"></image>
+  </view>
+  <!-- 底部横向滑动box -->
+  <view class='bottom-box'>
+    <scroll-view scroll-x="true" class="scroll-box">
+      <view class='slide-inline-box' wx:for='{{bottomImgs}}' wx:key='unique'>
+        <image src='{{item.imgurl}}' class='bottom-image' data-item='{{item}}' bindtap='insertYhq'></image>
+      </view>
+    </scroll-view>
+  </view>
+</view>

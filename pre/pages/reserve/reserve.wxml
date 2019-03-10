@@ -1,0 +1,14 @@
+<view class='container'>
+  <view class='card'>
+    <view class='card-left'>
+      <label>排</label>
+      <label>队</label>
+      <label>号</label>
+    </view>
+    <view class='card-right'>
+      <view class='card-right-top'>A{{diningId}}</view>
+      <view class='card-right-bottom'>您前面还有
+        <span style="color:#DC143C">{{preNo}}</span>位正在等待就餐</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class='view-container'>
+  <view class='card-lists' wx:for="{{couponList}}" wx:key="unique">
+    <view class='card'>
+      <view class='card-left'>￥{{item.coupon.je}}</view>
+      <view class='card-center'>
+        <view class='card-center-top'>本店通用优惠券</view>
+        <view class='card-center-bottom'> · {{item.coupon.mztj}}</view>
+        <view class='card-center-bottom'> · {{item.createTime}}至{{item.endTime}}</view>
+      </view>
+      <view class='card-right' bindtap='gotouse'>立即使用</view>
+    </view>
+  </view>
+</view>

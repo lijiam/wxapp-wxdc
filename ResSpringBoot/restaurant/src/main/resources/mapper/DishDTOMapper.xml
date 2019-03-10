@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wx.restaurant.mybatis.mapper.DishDTOMapper">
+    <resultMap id="BaseResultMap" type="com.wx.restaurant.mybatis.model.DishDTO">
+        <id column="type_id" property="typeId" jdbcType="INTEGER"/>
+        <result column="dish_type" property="dishType" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <collection property="foods" javaType="java.util.List" ofType="com.wx.restaurant.mybatis.model.Dish">
+            <id column="dish_id" property="dishId" jdbcType="INTEGER"/>
+            <result column="dish_name" property="dishName" jdbcType="VARCHAR"/>
+            <result column="dish_url" property="dishUrl" jdbcType="VARCHAR"/>
+            <result column="hot_status" property="hotStatus" jdbcType="INTEGER"/>
+            <result column="praise_times" property="praiseTimes" jdbcType="INTEGER"/>
+            <result column="is_sign" property="isSign" jdbcType="INTEGER"/>
+            <result column="is_new_dish" property="isNewDish" jdbcType="INTEGER"/>
+            <result column="sales_volume" property="salesVolume" jdbcType="INTEGER"/>
+            <result column="dish_price" property="dishPrice" jdbcType="DOUBLE"/>
+            <result column="dish_type" property="dishType" jdbcType="INTEGER"/>
+            <result column="dish_description" property="dishDescription" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+    <select id="dishList" resultMap="BaseResultMap">
+        select dish_type.*,dish.* from dish_type left join dish
+         on dish_type.dish_type=dish.dish_type
+    </select>
+</mapper>

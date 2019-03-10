@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wx.restaurant.mybatis.mapper.CouponMapper" >
+  <resultMap id="BaseResultMap" type="com.wx.restaurant.mybatis.model.Coupon" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="yhqid" property="yhqid" jdbcType="INTEGER" />
+    <result column="imgurl" property="imgurl" jdbcType="VARCHAR" />
+    <result column="je" property="je" jdbcType="INTEGER" />
+    <result column="mzje" property="mzje" jdbcType="INTEGER" />
+    <result column="mztj" property="mztj" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    yhqid, imgurl, je, mzje, mztj
+  </sql>
+</mapper>

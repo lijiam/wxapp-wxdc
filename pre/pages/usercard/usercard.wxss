@@ -1,0 +1,14 @@
+.user-card {
+  width: 95%;
+  margin: 10px auto auto 2.5%;
+  border-radius: 10px;
+  height: 200px;
+}
+
+.card-no{
+  position: fixed;
+  top: 175px;
+  left: 7%;
+  color: #757575;
+  font-size: 12px;
+}

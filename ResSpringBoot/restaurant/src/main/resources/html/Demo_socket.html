@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>websocket client</title>
+</head>
+<script type="text/javascript">
+    var ws;
+    function hello(){
+
+        ws = new WebSocket("ws://127.0.0.1:9999/cc");
+
+        ws.onopen = function(evn){
+            console.log(1111111111111111);
+            console.log(evn);
+        };
+        ws.onmessage = function(evn){
+            console.log(22222222222222);
+            console.log(evn.data);
+        };
+        ws.onclose = function(){
+            console.log(33333333);
+            console.log("关闭");
+        };
+
+    };
+    function subsend(){
+        var msg = document.getElementById("msg").value;
+        ws.send(msg);
+        document.getElementById("msg").value = "";
+    }
+</script>
+<body>
+
+<h2>Hello World!</h2>
+<div id="dv" />
+<input type="button" value="连接" onclick="hello()" />
+<input type="text" id ="msg" /><input type="button" onclick="subsend()" value="发送" />
+
+</body>
+</html>

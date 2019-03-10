@@ -1,0 +1,39 @@
+.card {
+  width: 80%;
+  height: 100px;
+  margin: 200px auto auto auto;
+  border-radius: 3px;
+}
+
+.card-left {
+  width: 12%;
+  height: 100px;
+  float: left;
+  padding-top: 22px;
+  text-align: center;
+  color: #fff;
+  background-color: #dc143c;
+}
+
+.card-right {
+  width: 88%;
+  height: 122px;
+  float: left;
+  background-color: rgba(219, 185, 146, 0.288);
+}
+
+.card-right-top {
+  height: 45px;
+  color: rgb(221, 146, 33);
+  font-size: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.card-right-bottom {
+  width: 100%;
+  font-size: 12px;
+  color: #999;
+  padding-left: 20px;
+  padding-top: 10px;
+}
